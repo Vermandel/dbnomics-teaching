@@ -1,0 +1,24 @@
+# Downloaded data and local execution artefacts
+examples/output/
+!examples/output/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# MATLAB
+*.asv
+
+# LaTeX build artefacts (the canonical PDF is explicitly retained)
+guide/*.aux
+guide/*.log
+guide/*.out
+guide/*.toc
+guide/*.synctex.gz
+guide/*.fls
+guide/*.fdb_latexmk
+
+# Operating-system files
+.DS_Store
+Thumbs.db
