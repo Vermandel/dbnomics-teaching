@@ -12,13 +12,14 @@ matériel reprend la fonction proposée par Gauthier dans
 
 - une seule interface publique : `code/call_dbnomics.m` ;
 - quatre scripts MATLAB commentés, inspirés du PDF source ;
-- le guide PDF `guide/call_dbnomics-guide.pdf` ;
+- le guide PDF `guide/call_dbnomics-guide.pdf`, compilé depuis le manuel
+  LaTeX canonique maintenu dans Dropbox ;
 - un test MATLAB réseau `tests/test_call_dbnomics.m`.
 
 ## Validation
 
-- `latexmk -pdf -interaction=nonstopmode -halt-on-error
-  call_dbnomics-guide.tex` : PASS, PDF A4 de 2 pages ;
+- `latexmk -g -pdf -shell-escape -interaction=nonstopmode -halt-on-error
+  dbnomics.tex` sur le manuel canonique : PASS, PDF A4 de 4 pages ;
 - `tests/test_call_dbnomics.m` et les quatre exemples ont été exécutés avec
   MATLAB R2025a et DBnomics : PASS ;
 - audit Git public : aucun `.tex`, `.sty`, `.cls`, `.bib` ou artefact LaTeX
