@@ -1,24 +1,28 @@
-# Downloaded data and local execution artefacts
+# Données et sorties locales
+*.mat
+*.csv
+*.xlsx
 examples/output/
-!examples/output/.gitkeep
 
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-
-# MATLAB
+# Éditeurs MATLAB
 *.asv
 
-# LaTeX build artefacts (the canonical PDF is explicitly retained)
-guide/*.aux
-guide/*.log
-guide/*.out
-guide/*.toc
-guide/*.synctex.gz
-guide/*.fls
-guide/*.fdb_latexmk
+# Sources et artefacts LaTeX : le PDF compilé seul est publiable
+*.tex
+*.sty
+*.cls
+*.bib
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+_minted-*/
 
-# Operating-system files
+# Python/cache et système
+__pycache__/
+*.py[cod]
 .DS_Store
 Thumbs.db

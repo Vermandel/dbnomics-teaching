@@ -1,65 +1,36 @@
-# DBnomics for Macroeconomic Data
+# DBnomics avec MATLAB
 
-A small, reusable teaching repository for downloading macroeconomic data from
-[DBnomics](https://db.nomics.world/). It is deliberately not tied to one
-course: the guide and examples can be cited from any class using MATLAB,
-Dynare, or Python.
+Ce dépôt fournit une prise en main immédiatement utilisable de DBnomics dans
+MATLAB. Toute récupération de données passe par une seule interface :
+[`call_dbnomics.m`](code/call_dbnomics.m). Il ne contient ni client Python ni
+fonction MATLAB concurrente.
 
-## Start here
+## Démarrage rapide
 
-Read the [canonical guide (PDF)](guide/dbnomics-teaching.pdf), then run one of
-the examples below. No downloaded dataset is committed to this repository.
+1. Téléchargez ce dépôt et ajoutez `code/` au chemin MATLAB.
+2. Exécutez un script du dossier `examples/`, par exemple
+   `examples/example_single_series.m`.
+3. Remplacez le *slug* par celui copié depuis DBnomics :
+   `provider/dataset/series`.
 
-    git clone https://github.com/Vermandel/dbnomics-teaching.git
-    cd dbnomics-teaching
-    python3 examples/python/validate_examples.py
-    python3 examples/python/download_series.py ECB/EXR/M.USD.EUR.SP00.A --output /tmp/eurusd.csv
+```matlab
+addpath('code')
+[output_mat, output_table, dates_nb] = call_dbnomics( ...
+    'Eurostat/prc_hicp_manr/M.RCH_A.TOT_X_NRG.AT');
+```
 
-The command writes a tidy CSV with series, period, and value columns. It can
-be read by MATLAB, or transformed further for a Dynare workflow.
+Le guide étudiant est disponible ici :
+[guide/call_dbnomics-guide.pdf](guide/call_dbnomics-guide.pdf).
 
-## Verified examples
+## Contenu
 
-All identifiers below were called through the DBnomics API on **21 August
-2026**. DBnomics provider codes matter: the World Bank provider is `WB`, not
-`WorldBank`.
+- `code/call_dbnomics.m` — interface unique de téléchargement ;
+- `examples/` — séries simple, plusieurs pays, plusieurs séries et graphique ;
+- `tests/test_call_dbnomics.m` — test MATLAB exécutable ;
+- `guide/call_dbnomics-guide.pdf` — documentation pédagogique compilée ;
+- `RELEASE_NOTE.md` — inventaire du remplacement et validations.
 
-| Frequency | Provider / dataset | Series | Illustration |
-| --- | --- | --- | --- |
-| Monthly | ECB / EXR | M.USD.EUR.SP00.A | USD per euro spot exchange rate |
-| Monthly, two series | ECB / EXR | M.USD.EUR.SP00.A, M.GBP.EUR.SP00.A | aligned exchange-rate download |
-| Quarterly | IMF / IFS | Q.FR.NGDP_R_SA_XDC | French real GDP, seasonally adjusted |
-| Annual | WB / WDI | A-NY.GDP.MKTP.KD-FRA | French GDP in constant 2015 US dollars |
-
-The original requested spelling WorldBank/WDI/... returns HTTP 404; the
-working, tested identifier is WB/WDI/A-NY.GDP.MKTP.KD-FRA.
-
-## Layout
-
-* guide/ — LaTeX source and compiled reference PDF.
-* examples/python/ — standard-library downloader, validation and transformation examples.
-* examples/matlab/ — MATLAB webread examples, including date parsing and CSV export.
-* tests/ — a no-network structural test for the public release.
-
-## Reproducibility and citation
-
-Record the provider, dataset, series code, API URL, access date, frequency,
-transformations, and any missing-value rule alongside an empirical result.
-DBnomics aggregates data supplied by providers; cite the original provider as
-well as DBnomics where appropriate. Consult each series' metadata and licence
-before redistribution.
-
-## Requirements
-
-* Python 3.9+ for the Python examples (standard library only).
-* MATLAB with webread, jsondecode, readtable, and writetable for the MATLAB examples.
-* A LaTeX installation only to rebuild the guide PDF.
-
-## Regenerating the guide
-
-    cd guide
-    pdflatex dbnomics-teaching.tex
-    pdflatex dbnomics-teaching.tex
-
-The PDF is versioned intentionally; aux, log, and other build products are
-ignored.
+Les données sont téléchargées au moment de l'exécution et ne sont pas
+versionnées. Vérifiez toujours définition, unité, fréquence, ajustement
+saisonnier, couverture et licence sur la page du fournisseur. Citez le
+fournisseur original, ainsi que DBnomics lorsque c'est pertinent.
