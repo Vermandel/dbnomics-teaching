@@ -3,51 +3,90 @@
   "course": "Shared teaching resource — DBnomics (including Bayesian Techniques for Macroeconomics)",
   "title": "DBnomics with MATLAB",
   "language": "en",
-  "short_intro": "Find a public DBnomics series token, download aligned observations with call_dbnomics, and plot two series using either datetime or numeric time vectors.",
+  "short_intro": "Download the DBnomics MATLAB function and six generic examples directly from the guide, then plot aligned series using datetime or numeric dates.",
   "generated_date": "2026-11-11",
   "publication_status": "published",
-  "commit": "1ff66c0c5d96b06556e5c0a202877cdc4a117d74",
-  "ref": "1ff66c0c5d96b06556e5c0a202877cdc4a117d74",
-  "commit_semantics": "Immutable content commit. This manifest is added in a subsequent commit; it does not attempt to contain its own Git hash. All immutable resource URLs point to the validated content commit.",
+  "commit": "d0a59bf337b63e8000c707ab129e557fd629eb70",
+  "ref": "d0a59bf337b63e8000c707ab129e557fd629eb70",
+  "commit_semantics": "Guide content commit. Unchanged MATLAB downloads remain pinned to the previously tested immutable commit 1ff66c0c5d96b06556e5c0a202877cdc4a117d74.",
   "dbnomics": {
-    "repo_url": "https://github.com/Vermandel/dbnomics-teaching/tree/1ff66c0c5d96b06556e5c0a202877cdc4a117d74",
-    "guide_url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/guide/call_dbnomics-guide.pdf",
+    "repo_url": "https://github.com/Vermandel/dbnomics-teaching/tree/d0a59bf337b63e8000c707ab129e557fd629eb70",
+    "guide_url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/d0a59bf337b63e8000c707ab129e557fd629eb70/guide/call_dbnomics-guide.pdf",
     "stable_repo_url": "https://github.com/Vermandel/dbnomics-teaching",
     "stable_guide_url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/main/guide/call_dbnomics-guide.pdf"
   },
   "scripts": [
     {
       "path": "code/call_dbnomics.m",
-      "resource_type": "matlab_function",
       "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/code/call_dbnomics.m",
-      "sha256": "85a9390f3dacaf2380c91362f65874726e861d3ba6fbe272dc4ef640eb78275a"
+      "status": 200,
+      "sha256": "85a9390f3dacaf2380c91362f65874726e861d3ba6fbe272dc4ef640eb78275a",
+      "resource_type": "matlab_function",
+      "description": "Required download and date-alignment function"
+    },
+    {
+      "path": "examples/example_single_series.m",
+      "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_single_series.m",
+      "status": 200,
+      "sha256": "ff3e34438f54a4835730114efaab46273fe2f6c460aabaaef703710748b55fcd",
+      "resource_type": "matlab_script",
+      "description": "One Austrian inflation series"
+    },
+    {
+      "path": "examples/example_multiple_countries.m",
+      "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_multiple_countries.m",
+      "status": 200,
+      "sha256": "81bfcbafeab212f9ef41829374a23fd345f68e276c155e7089e9e2cd59733302",
+      "resource_type": "matlab_script",
+      "description": "Several countries in one request"
+    },
+    {
+      "path": "examples/example_multiple_series.m",
+      "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_multiple_series.m",
+      "status": 200,
+      "sha256": "b17eb68768b70aad987ca60bb8b7186a119f343f6607178d70c16c00cef1870f",
+      "resource_type": "matlab_script",
+      "description": "Multiple aligned series and missing dates"
     },
     {
       "path": "examples/example_plot_datetime.m",
-      "resource_type": "matlab_script",
       "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_plot_datetime.m",
-      "sha256": "3595385cf64a351251b45050a97f6f1e9d2d2c2a55b3ea7da2a8bf67b4eecdcf"
+      "status": 200,
+      "sha256": "3595385cf64a351251b45050a97f6f1e9d2d2c2a55b3ea7da2a8bf67b4eecdcf",
+      "resource_type": "matlab_script",
+      "description": "Two series plotted against datetime dates"
     },
     {
       "path": "examples/example_plot_numeric.m",
-      "resource_type": "matlab_script",
       "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_plot_numeric.m",
-      "sha256": "8ced2646e5cef089c46db46ccb7db6d8ab0320c0bd3bf611218dc9f748eaa1c7"
+      "status": 200,
+      "sha256": "8ced2646e5cef089c46db46ccb7db6d8ab0320c0bd3bf611218dc9f748eaa1c7",
+      "resource_type": "matlab_script",
+      "description": "Two series plotted against numeric dates"
+    },
+    {
+      "path": "examples/example_plot_inflation.m",
+      "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_plot_inflation.m",
+      "status": 200,
+      "sha256": "d1430f2cba2c1764d33ce566a0d500fc75c3f83ce06da8c55ab34a7be97e41d0",
+      "resource_type": "matlab_script",
+      "description": "Compatibility entry point; also download example_plot_datetime.m"
     }
   ],
   "guide": {
     "path": "guide/call_dbnomics-guide.pdf",
     "resource_type": "guide_pdf",
-    "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/guide/call_dbnomics-guide.pdf",
-    "sha256": "340de55ee478dcc253f475b32675ef47f4516f6afc24e7a2e0831a708643b50b",
+    "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/d0a59bf337b63e8000c707ab129e557fd629eb70/guide/call_dbnomics-guide.pdf",
+    "sha256": "f181dafba467b7d8205e1835b56424613a06e738dc23c09283e03c2b39daadb8",
     "pages": 7
   },
   "source": {
     "path": "guide/source/dbnomics.tex",
     "resource_type": "latex_source",
-    "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/guide/source/dbnomics.tex",
+    "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/d0a59bf337b63e8000c707ab129e557fd629eb70/guide/source/dbnomics.tex",
     "build_command": "bash build-guide.sh",
-    "build_environment": "Native Linux temporary filesystem; latexmk -pdf -shell-escape; minted matlab"
+    "build_environment": "Native Linux temporary filesystem; latexmk -pdf -shell-escape; minted matlab",
+    "sha256": "e1ca639a564fc3d8d67d2a98e68233c6152112f77c78882b1dd2bc5840a49bb5"
   },
   "captures": [
     {
@@ -79,19 +118,38 @@
     "live_matlab": "pass: both plot scripts, 313 aligned rows and two curves each; all other guide requests; OECD token",
     "release_scripts": "pass: integration test and all six example scripts in a clean distribution copy",
     "offline_fixture": "pass: synthetic unsorted periods, unequal coverage, NaN, exact date/value alignment; separate from live tests",
-    "latex": "pass: native Linux shell-escape builds in master and public layouts; identical extracted text",
-    "visual": "pass: seven PDF pages and both freshly executed MATLAB figures inspected",
+    "latex": "PASS: native Linux shell-escape build, 7 pages, no overfull or minted errors",
+    "visual": "PASS: changed pages 4-7 inspected; pages 1-3 extracted text unchanged",
     "warnings": "Inherited style font substitution/bookmark warnings only; no overfull boxes",
-    "logs": "Private validation evidence is intentionally excluded"
+    "logs": "Private validation evidence is intentionally excluded",
+    "current_change": "MATLAB files byte-identical to the live-tested prior release; no new runtime execution needed. Previously recorded live and fixture results are historical, not rerun for this links-only change.",
+    "pdf_links": "PASS: seven distinct URI annotations point to immutable raw MATLAB files; all seven HTTP GET 200 and SHA-256 equal published/local scripts"
   },
   "website": {
     "owner": "mercure",
     "page_url": "https://vermandel.org/btm/",
-    "action": "Replace both old guide links with the single canonical guide_url; update repository/script links to this content commit. No BTM-specific guide."
+    "action": "Move generic DBnomics download links out of Session 1 into the DBnomics block; use this guide_url. No physical course-file deletion.",
+    "move_from_session1": [
+      "call_dbnomics.m",
+      "example_single_series.m",
+      "example_multiple_countries.m",
+      "example_multiple_series.m",
+      "example_plot_inflation.m"
+    ],
+    "keep_session1": [
+      "BSmeasures.m",
+      "bpass.m",
+      "logGDP.m",
+      "dyn_toy_model.mod",
+      "toy_model.m",
+      "toy_model_bootstrap.m",
+      "download_data.m"
+    ],
+    "dependencies": "BSmeasures.m requires bpass.m. download_data.m is an optional BTM US-GDP example producing btm_demo_data.mat and needs call_dbnomics.m; preserve its local helper. Generic inflation wrapper needs the datetime example in the same examples folder."
   },
   "public_verification": {
     "date": "2026-11-11",
-    "status": "HTTP 200 and exact SHA-256 match for guide, three scripts, LaTeX source and two captures",
-    "note": "Initial CDN 404 immediately after push; refreshed requests succeeded. Website publication remains separate."
-  }
+    "status": "PDF and guide source HTTP GET 200 with exact local hashes; seven PDF download targets HTTP GET 200 and exact hashes"
+  },
+  "request_id": "btm-dbnomics-guide-downloads-20261111"
 }
