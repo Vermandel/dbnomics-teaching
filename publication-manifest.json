@@ -5,7 +5,7 @@
   "language": "en",
   "short_intro": "Find a public DBnomics series token, download aligned observations with call_dbnomics, and plot two series using either datetime or numeric time vectors.",
   "generated_date": "2026-11-11",
-  "publication_status": "validated_local_commit_awaiting_parent_push",
+  "publication_status": "published",
   "commit": "1ff66c0c5d96b06556e5c0a202877cdc4a117d74",
   "ref": "1ff66c0c5d96b06556e5c0a202877cdc4a117d74",
   "commit_semantics": "Immutable content commit. This manifest is added in a subsequent commit; it does not attempt to contain its own Git hash. All immutable resource URLs point to the validated content commit.",
@@ -88,5 +88,10 @@
     "owner": "mercure",
     "page_url": "https://vermandel.org/btm/",
     "action": "Replace both old guide links with the single canonical guide_url; update repository/script links to this content commit. No BTM-specific guide."
+  },
+  "public_verification": {
+    "date": "2026-11-11",
+    "status": "HTTP 200 and exact SHA-256 match for guide, three scripts, LaTeX source and two captures",
+    "note": "Initial CDN 404 immediately after push; refreshed requests succeeded. Website publication remains separate."
   }
 }
