@@ -75,6 +75,12 @@ have \texttt{webread}, \texttt{datetime}, \texttt{string} and Internet access. T
 \url{https://github.com/Vermandel/dbnomics-teaching} No DBnomics account, API key or
 credential is required.
 
+\noindent\textbf{Direct download:} \href{https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/code/call_dbnomics.m}{\texttt{call\_dbnomics.m}} (required function).
+Save it in a local \texttt{code/} folder and the examples linked below in a
+sibling \texttt{examples/} folder. Keep the original filenames. These links
+open raw files directly; if code is displayed, use the browser’s \emph{Save as}.
+No account is needed.
+
 \begin{minted}{matlab}
 addpath('code') % from the downloaded repository root
 [output_mat, output_table, dates_nb] = call_dbnomics( ...
@@ -102,6 +108,8 @@ are period labels and column names are the final dimension codes (for example
 
 \section{One series}
 
+\noindent\textbf{Download:} \href{https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_single_series.m}{\texttt{example\_single\_series.m}}. Austrian inflation.
+
 The first example downloads Austrian inflation. The second matrix column holds
 the observations; its first column holds the dates.
 \begin{minted}{matlab}
@@ -113,6 +121,8 @@ Inspect \texttt{tab(1:5,:)} and the last rows before transforming a series.
 Do not confuse a rate of change, an index level and a seasonally adjusted level.
 
 \section{Several countries}
+
+\noindent\textbf{Download:} \href{https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_multiple_countries.m}{\texttt{example\_multiple\_countries.m}}. Several countries in one request.
 
 Within a dimension, \texttt{+} expands several codes. The following request,
 from the historical examples, returns four columns: \texttt{AT}, \texttt{BE},
@@ -126,6 +136,8 @@ If country coverage differs, the unmatched dates are represented by
 drop dates without a documented economic and statistical reason.
 
 \section{Several series and alignment}
+
+\noindent\textbf{Download:} \href{https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_multiple_series.m}{\texttt{example\_multiple\_series.m}}. Aligned series and missing dates.
 
 Pass several slugs as separate MATLAB arguments. This example requests two
 monthly HICP measures for Austria and Germany:
@@ -151,14 +163,14 @@ same alignment. A missing value remains \texttt{NaN} and creates a gap in the
 line: never replace it with zero merely to obtain a continuous plot.
 
 \subsection*{A datetime time vector}
-Run \texttt{examples/example\_plot\_datetime.m}. Convert the first matrix
+Download and run \href{https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_plot_datetime.m}{\texttt{example\_plot\_datetime.m}} (two series, datetime axis). Convert the first matrix
 column from MATLAB serial dates to \texttt{datetime}. Do not parse the table
 row names with an assumed date format: their labels depend on frequency.
 \inputminted[firstline=6]{matlab}{examples/example_plot_datetime.m}
 
 \clearpage
 \subsection*{A numeric time vector}
-Run \texttt{examples/example\_plot\_numeric.m}. Here the third output is a
+Download and run \href{https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_plot_numeric.m}{\texttt{example\_plot\_numeric.m}} (two series, numeric axis). Here the third output is a
 numeric vector $y+(m-1)/12$: January is $y$, February is $y+1/12$.
 This is a readable monthly time scale, not a MATLAB \texttt{datenum}; do not
 pass it to \texttt{datetick} or convert it with \texttt{ConvertFrom='datenum'}.
@@ -175,5 +187,7 @@ y_complete = mat(keep,2:3);
 This removes incomplete rows; it is a substantive sample choice, not an
 alignment repair. Inspect first and last dates, observation counts and units
 before analysis, and cite the original provider as well as DBnomics.
+
+\medskip\noindent{\small Legacy entry point: \href{https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_plot_inflation.m}{\texttt{example\_plot\_inflation.m}}. This compatibility script runs \texttt{example\_plot\_datetime.m}; download both into the same \texttt{examples/} folder.}
 
 \end{document}
