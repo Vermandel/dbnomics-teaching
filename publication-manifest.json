@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "course": "Shared teaching resource — DBnomics (including Bayesian Techniques for Macroeconomics)",
+  "title": "DBnomics with MATLAB",
+  "language": "en",
+  "short_intro": "Find a public DBnomics series token, download aligned observations with call_dbnomics, and plot two series using either datetime or numeric time vectors.",
+  "generated_date": "2026-11-11",
+  "publication_status": "validated_local_commit_awaiting_parent_push",
+  "commit": "1ff66c0c5d96b06556e5c0a202877cdc4a117d74",
+  "ref": "1ff66c0c5d96b06556e5c0a202877cdc4a117d74",
+  "commit_semantics": "Immutable content commit. This manifest is added in a subsequent commit; it does not attempt to contain its own Git hash. All immutable resource URLs point to the validated content commit.",
+  "dbnomics": {
+    "repo_url": "https://github.com/Vermandel/dbnomics-teaching/tree/1ff66c0c5d96b06556e5c0a202877cdc4a117d74",
+    "guide_url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/guide/call_dbnomics-guide.pdf",
+    "stable_repo_url": "https://github.com/Vermandel/dbnomics-teaching",
+    "stable_guide_url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/main/guide/call_dbnomics-guide.pdf"
+  },
+  "scripts": [
+    {
+      "path": "code/call_dbnomics.m",
+      "resource_type": "matlab_function",
+      "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/code/call_dbnomics.m",
+      "sha256": "85a9390f3dacaf2380c91362f65874726e861d3ba6fbe272dc4ef640eb78275a"
+    },
+    {
+      "path": "examples/example_plot_datetime.m",
+      "resource_type": "matlab_script",
+      "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_plot_datetime.m",
+      "sha256": "3595385cf64a351251b45050a97f6f1e9d2d2c2a55b3ea7da2a8bf67b4eecdcf"
+    },
+    {
+      "path": "examples/example_plot_numeric.m",
+      "resource_type": "matlab_script",
+      "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/examples/example_plot_numeric.m",
+      "sha256": "8ced2646e5cef089c46db46ccb7db6d8ab0320c0bd3bf611218dc9f748eaa1c7"
+    }
+  ],
+  "guide": {
+    "path": "guide/call_dbnomics-guide.pdf",
+    "resource_type": "guide_pdf",
+    "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/guide/call_dbnomics-guide.pdf",
+    "sha256": "340de55ee478dcc253f475b32675ef47f4516f6afc24e7a2e0831a708643b50b",
+    "pages": 7
+  },
+  "source": {
+    "path": "guide/source/dbnomics.tex",
+    "resource_type": "latex_source",
+    "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/guide/source/dbnomics.tex",
+    "build_command": "bash build-guide.sh",
+    "build_environment": "Native Linux temporary filesystem; latexmk -pdf -shell-escape; minted matlab"
+  },
+  "captures": [
+    {
+      "path": "guide/source/captures/dbnomics-home.png",
+      "resource_type": "interface_screenshot",
+      "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/guide/source/captures/dbnomics-home.png",
+      "captured_on": "2026-11-11",
+      "source_url": "https://db.nomics.world/"
+    },
+    {
+      "path": "guide/source/captures/dbnomics-series.png",
+      "resource_type": "interface_screenshot",
+      "url": "https://raw.githubusercontent.com/Vermandel/dbnomics-teaching/1ff66c0c5d96b06556e5c0a202877cdc4a117d74/guide/source/captures/dbnomics-series.png",
+      "captured_on": "2026-11-11",
+      "source_url": "https://db.nomics.world/OECD/DSD_KEI@DF_KEI/ARG.A.CA_GDP.PT_B1GQ._T.Y._Z"
+    }
+  ],
+  "public_series_token": {
+    "value": "OECD/DSD_KEI@DF_KEI/ARG.A.CA_GDP.PT_B1GQ._T.Y._Z",
+    "is_secret": false,
+    "page_url": "https://db.nomics.world/OECD/DSD_KEI@DF_KEI/ARG.A.CA_GDP.PT_B1GQ._T.Y._Z",
+    "api_url": "https://api.db.nomics.world/v22/series/OECD/DSD_KEI@DF_KEI/ARG.A.CA_GDP.PT_B1GQ._T.Y._Z?observations=1",
+    "verified_http_status": 200,
+    "observed_coverage": "2006–2025",
+    "description": "Argentina annual current-account balance, percent of GDP"
+  },
+  "tests": {
+    "runtime": "MATLAB R2025a Update 1 (25.1.0.2973910), Windows PCWIN64, absolute Windows executable invoked from WSL",
+    "live_matlab": "pass: both plot scripts, 313 aligned rows and two curves each; all other guide requests; OECD token",
+    "release_scripts": "pass: integration test and all six example scripts in a clean distribution copy",
+    "offline_fixture": "pass: synthetic unsorted periods, unequal coverage, NaN, exact date/value alignment; separate from live tests",
+    "latex": "pass: native Linux shell-escape builds in master and public layouts; identical extracted text",
+    "visual": "pass: seven PDF pages and both freshly executed MATLAB figures inspected",
+    "warnings": "Inherited style font substitution/bookmark warnings only; no overfull boxes",
+    "logs": "Private validation evidence is intentionally excluded"
+  },
+  "website": {
+    "owner": "mercure",
+    "page_url": "https://vermandel.org/btm/",
+    "action": "Replace both old guide links with the single canonical guide_url; update repository/script links to this content commit. No BTM-specific guide."
+  }
+}
