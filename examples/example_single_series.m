@@ -1,7 +1,9 @@
+% DBnomics with MATLAB -- Gauthier Vermandel, Universite Paris-Dauphine-PSL
 %% One series: Austrian inflation excluding energy
 % Run from the repository root.
 root = fileparts(fileparts(mfilename('fullpath')));
-addpath(fullfile(root, 'code'));
+addpath(root);
+if exist(fullfile(root, 'code'), 'dir'), addpath(fullfile(root, 'code')); end
 
 [output_mat, output_table, dates_nb] = call_dbnomics( ...
     'Eurostat/prc_hicp_manr/M.RCH_A.TOT_X_NRG.AT');

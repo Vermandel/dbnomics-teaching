@@ -1,17 +1,10 @@
-# Données et sorties locales
+# Local downloaded data and generated outputs
 *.mat
 *.csv
 *.xlsx
-examples/output/
-
-# Éditeurs MATLAB
 *.asv
-
-# Sources et artefacts LaTeX : le PDF compilé seul est publiable
-*.tex
-*.sty
-*.cls
-*.bib
+examples/output/
+# Build intermediates (academic LaTeX sources are explicitly authorised)
 *.aux
 *.log
 *.out
@@ -20,8 +13,6 @@ examples/output/
 *.fls
 *.fdb_latexmk
 _minted-*/
-
-# Python/cache et système
 __pycache__/
 *.py[cod]
 .DS_Store

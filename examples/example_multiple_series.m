@@ -1,6 +1,8 @@
+% DBnomics with MATLAB -- Gauthier Vermandel, Universite Paris-Dauphine-PSL
 %% Two series with the same frequency, aligned on their date union
 root = fileparts(fileparts(mfilename('fullpath')));
-addpath(fullfile(root, 'code'));
+addpath(root);
+if exist(fullfile(root, 'code'), 'dir'), addpath(fullfile(root, 'code')); end
 
 [data_matrix, data_table, dates_nb] = call_dbnomics( ...
     'Eurostat/prc_hicp_manr/M.RCH_A.TOT_X_NRG.AT+DE', ...

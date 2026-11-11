@@ -1,6 +1,8 @@
+% DBnomics with MATLAB -- Gauthier Vermandel, Universite Paris-Dauphine-PSL
 %% Several countries in one slug
 root = fileparts(fileparts(mfilename('fullpath')));
-addpath(fullfile(root, 'code'));
+addpath(root);
+if exist(fullfile(root, 'code'), 'dir'), addpath(fullfile(root, 'code')); end
 
 % The + sign expands the country dimension: one table column per country.
 [output_mat, inflation, dates_nb] = call_dbnomics( ...

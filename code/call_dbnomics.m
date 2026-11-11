@@ -99,8 +99,6 @@ if numel(periods) ~= numel(values)
 end
 frequency = local_frequency(doc, periods);
 dates = local_period_to_datenum(periods, frequency);
-% The last dimension code gives short headers (AT, BE, ...).
-% MATLAB makes duplicate headers unique.
 parts = strsplit(slug, '/');
 dimensions = strsplit(parts{3}, '.');
 name = dimensions{end};
